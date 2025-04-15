@@ -19,7 +19,8 @@ export interface Post {
   
 export interface AuthContextProps {
     user: Models.User<Models.Preferences> | User | null;
-    loader: boolean;
+    isLoading: boolean;
+    isAuthenticated: boolean;
     signUp: (name: string, email: string, password: string) => Promise<void>;
     logIn: (email: string, password: string) => Promise<void>;
     getUser: () => Promise<void>;
